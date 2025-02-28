@@ -1,0 +1,47 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 130px;
+  height: 36px;
+  padding: 5px 10px;
+  border: 0;
+
+  &--cancel {
+    background-color: rgb(216, 86, 86);
+    transition: background-color ease-in 0.3s;
+
+    &:focus-visible,
+    &:hover {
+      background-color: rgb(145, 58, 58);
+    }
+  }
+
+  &--agree {
+    background-color: rgb(97, 97, 235);
+    transition: background-color ease-in 0.3s;
+
+    &:focus-visible,
+    &:hover {
+      background-color: rgb(68, 68, 172);
+    }
+  }
+}
+
+.todolist {
+  &__header {
+    margin: 0 0 10px;
+    padding: 0;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style-type: none;
+  }
+}

@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import "./App.scss";
+import { MainPage } from "./pages/MainPage/MainPage";
+import { CreateTodoPage } from "./pages/CreateTodoPage/CreateTodoPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <div className="container">
+          <nav className="navMenu">
+            <Link className="navMenu__text" to={"/to-do-app"}>
+              Главная
+            </Link>
+            <Link className="navMenu__text" to={"/to-do-app/create-todo"}>
+              Создать Тудушку
+            </Link>
+          </nav>
+
+          <main className="content">
+            <h1 className="visually-hidden">Todo App</h1>
+            <Routes>
+              <Route path="/to-do-app" element={<MainPage />} />
+              <Route
+                path="/to-do-app/create-todo"
+                element={<CreateTodoPage />}
+              />
+            </Routes>
+          </main>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

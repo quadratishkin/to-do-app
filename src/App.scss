@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.app {
+  padding: 10px;
+}
+
+.navMenu {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 20px;
+
+  &__text {
+    text-decoration: none;
+    transition: color ease-in 0.3s;
+    color: blue;
+
+    &:focus-visible,
+    &:hover {
+      color: darkblue;
+    }
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}

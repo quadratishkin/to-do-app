@@ -1,0 +1,85 @@
+.btn-update {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &__img {
+    transition: transform ease-in 0.3s;
+  }
+
+  &:hover {
+    .btn-update__img {
+      transform: scale(1.5);
+    }
+  }
+}
+
+.todo {
+  position: relative;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: beige;
+  min-width: 220px;
+
+  @media (min-width: 1024px) {
+    min-width: 440px;
+  }
+
+  &__name {
+    padding: 0;
+    margin: 0 0 10px;
+  }
+
+  &__description {
+    margin: 0 0 15px;
+    padding: 0;
+  }
+
+  &__lists {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+
+  &__btn {
+    display: block;
+    border: 0;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 0 auto;
+    width: 150px;
+    background-color: rgb(231, 136, 136);
+    transition: background-color ease-in 0.3s;
+
+    &:focus-visible,
+    &:hover {
+      background-color: rgb(141, 76, 76);
+    }
+  }
+
+  &__characteristic {
+    border: 1px solid black;
+    padding: 5px 10px;
+
+    &--WORKING,
+    &--MEDIUM {
+      background-color: rgb(243, 148, 24);
+    }
+
+    &--ANALYZED,
+    &--LOW {
+      background-color: rgb(63, 157, 239);
+    }
+    &--NOT-STARTED,
+    &--HIGH {
+      background-color: rgb(244, 55, 48);
+    }
+  }
+}
