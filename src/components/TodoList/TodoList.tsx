@@ -30,7 +30,7 @@ export const TodoList = () => {
   }, [isNeedToRerender]);
 
   const handleClick = (id: number, modalType: Action) => {
-    if (modalType == Action.DELETE) {
+    if (modalType === Action.DELETE) {
       setChangeTodo(id);
       setisOpenDeleteModal(true);
     } else {
