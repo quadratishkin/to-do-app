@@ -45,4 +45,12 @@
     gap: 25px;
     list-style-type: none;
   }
+
+  &__item {
+    width: 100%;
+
+    @media (min-width: 550px) {
+      width: calc((100% - 25px) / 2);
+    }
+  }
 }
