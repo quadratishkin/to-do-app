@@ -9,7 +9,7 @@ function App() {
       <div className="app">
         <div className="container">
           <nav className="navMenu">
-            <Link className="navMenu__text" to={"/to-do-app/"}>
+            <Link className="navMenu__text" to={"/to-do-app"}>
               Главная
             </Link>
             <Link className="navMenu__text" to={"/to-do-app/create-todo"}>
@@ -20,7 +20,7 @@ function App() {
           <main className="content">
             <h1 className="visually-hidden">Todo App</h1>
             <Routes>
-              <Route path="/to-do-app/" element={<MainPage />} />
+              <Route path="/to-do-app" element={<MainPage />} />
               <Route
                 path="/to-do-app/create-todo"
                 element={<CreateTodoPage />}
