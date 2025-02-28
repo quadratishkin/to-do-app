@@ -9,10 +9,8 @@ interface ModalProps {
 export const Modal = ({ isOpen, children }: ModalProps) => {
   if (!isOpen) return null;
   return (
-    <div className="background">
-      <div className="modal">
-        <div>{children}</div>
-      </div>
+    <div className="modal">
+      <div>{children}</div>
     </div>
   );
 };

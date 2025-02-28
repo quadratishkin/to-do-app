@@ -14,6 +14,7 @@ export const CreateTodoPage = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -36,6 +37,7 @@ export const CreateTodoPage = () => {
       newList.push(newTodo);
       localStorage.setItem("todolist", JSON.stringify(newList));
     }
+    reset({ todoname: "", todoDescription: "" });
   };
 
   return (
