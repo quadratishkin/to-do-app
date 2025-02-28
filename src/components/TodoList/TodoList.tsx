@@ -68,7 +68,7 @@ export const TodoList = () => {
     formState: { errors },
   } = useForm();
 
-  const formFunc = async () => {
+  const formFunc = () => {
     handleChangeTodo(Action.UPDATE);
     setisOpenUpdateModal(false);
     setIsNeedToRerender((e) => !e);
