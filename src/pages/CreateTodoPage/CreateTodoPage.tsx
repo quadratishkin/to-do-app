@@ -26,14 +26,15 @@ export const CreateTodoPage = () => {
       priority: inputPriority,
     };
 
-    const currentList = localStorage.getItem("todolist");
+    const currentList = localStorage.getItem("todolist") || "";
     if (currentList) {
       const newList = JSON.parse(currentList);
       newList.push(newTodo);
-      console.log(newList);
       localStorage.setItem("todolist", JSON.stringify(newList));
     } else {
-      localStorage.setItem("todolist", JSON.stringify(newTodo));
+      const newList = [];
+      newList.push(newTodo);
+      localStorage.setItem("todolist", JSON.stringify(newList));
     }
   };
 
